@@ -29,16 +29,16 @@ jobs:
           command: mvn test
       - run:
           name: createImage
-          command: docker build -t MWHelloWorld:1.0
+          command: docker build -t mwhelloworld:1.0
   Docker-build:
     docker:
       # replace with your preferred image
       - image: cimg/openjdk:11.0
     steps:
       - docker/build:
-          image: MWHelloWorld 
+          image: mwhelloworld
           registry: mwdockerregistry 
-          tag: '1.0' 
+          tag: '2.0' 
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
